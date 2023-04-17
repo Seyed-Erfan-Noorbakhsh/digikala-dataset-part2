@@ -33,9 +33,9 @@ do
     {
         case "f" or "F":
             Console.WriteLine("Enter the ID_ORDER from dataset");
-            int o = locking.keyboardnumberlocker();
+            int f = locking.keyboardnumberlocker();
 
-            Console.WriteLine(op.priceSalesByorder(o));
+            Console.WriteLine(op.priceSalesByorder(f));
             break;
 
         case "k" or "K":
@@ -47,23 +47,23 @@ do
 
         case "e" or "E":
             Console.WriteLine("Enter the ID_ITEM from dataset");
-            int i = locking.keyboardnumberlocker();
+            int e = locking.keyboardnumberlocker();
 
-            Console.WriteLine(op.sumSalesByitem(i));
+            Console.WriteLine(op.sumSalesByitem(e));
             break;
 
         case "w" or "W":
             Console.WriteLine("Enter DATE from dataset");
-            int t = locking.keyboardnumberlocker();
+            int w = locking.keyboardnumberlocker();
 
-            Console.WriteLine(op.SumSalesByYear(t));
+            Console.WriteLine(op.SumSalesByYear(w));
             break;
 
         case "c" or "C":
             Console.WriteLine("Enter CITY from dataset");
-            int y = Convert.ToInt32(Console.ReadLine());
+            int c = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine(op.SumSalescity_name(y));
+            Console.WriteLine(op.SumSalescity_name(c));
             break;
 
         default:
