@@ -1,4 +1,4 @@
-﻿using Digikala1.Model;
+using Digikala1.Model;
 using Digikala1.Operations;
 using locking;
 using cities;
@@ -20,56 +20,50 @@ do
     lockkeyboard locking = new lockkeyboard();
 
     Console.ForegroundColor = ConsoleColor.Green;
-    Console.WriteLine("Hi, here we have some information about digikala website from 2013 until 2018 \n " + " if you want price of id order click [O] \n " +
-                      "price by customer click [C] \n price by item click [I]" +
-                      "\n price by about time click [T] \n price of each city click [Y]");
+    Console.WriteLine("Hi, here we have some information about digikala website from 2013 until 2018 ");
+    Console.WriteLine(" if you want price of id order click [F] ");
+    Console.WriteLine("price by customer click [k]  price by item click [E]");
+    Console.WriteLine(" price by about time click [W] ");
+    Console.WriteLine(" price of each city click [C]");   
     Console.ResetColor();
     string x = locking.menulocking();
 
 
     switch (x)
     {
-        case "o" or "O":
+        case "f" or "F":
             Console.WriteLine("Enter the ID_ORDER from dataset");
             int o = locking.keyboardnumberlocker();
 
             Console.WriteLine(op.priceSalesByorder(o));
-
             break;
 
-        case "c" or "C":
+        case "k" or "K":
             Console.WriteLine("Enter the ID_CUSTOMER from dataset");
-            int c = locking.keyboardnumberlocker();
+            int k = locking.keyboardnumberlocker();
 
-            Console.WriteLine(op.SumSalesBycustomer(c));
-
+            Console.WriteLine(op.SumSalesBycustomer(k));
             break;
 
-
-        case "i" or "I":
+        case "e" or "E":
             Console.WriteLine("Enter the ID_ITEM from dataset");
             int i = locking.keyboardnumberlocker();
 
             Console.WriteLine(op.sumSalesByitem(i));
-
             break;
 
-
-        case "t" or "T":
+        case "w" or "W":
             Console.WriteLine("Enter DATE from dataset");
             int t = locking.keyboardnumberlocker();
 
             Console.WriteLine(op.SumSalesByYear(t));
-
             break;
 
-
-        case "y" or "Y":
+        case "c" or "C":
             Console.WriteLine("Enter CITY from dataset");
             int y = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine(op.SumSalescity_name(y));
-
             break;
 
         default:
