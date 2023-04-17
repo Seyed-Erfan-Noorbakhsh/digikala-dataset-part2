@@ -45,7 +45,7 @@ namespace locking
             {
                 y = Console.ReadKey(true).KeyChar.ToString();
 
-            } while (y.ToLower() != "y" & y.ToLower() != "o" & y.ToLower() != "c" & y.ToLower() != "i" & y.ToLower() != "t");
+            } while (y.ToLower() != "c" & y.ToLower() != "f" & y.ToLower() != "k" & y.ToLower() != "e" & y.ToLower() != "w");
             return y;
         }
     }
